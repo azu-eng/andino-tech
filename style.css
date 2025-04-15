@@ -1,0 +1,71 @@
+body {
+  background-color: #f7f3ea;
+  font-family: Arial, sans-serif;
+  color: #0a1f2c;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin: 20px auto;
+  display: block;
+}
+
+header {
+  padding: 30px 10px;
+  background-color: #ff6f00;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #0a1f2c;
+  color: white;
+  padding: 10px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebd5a;
+}
+
+/* Responsive: se adapta a pantallas chicas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .whatsapp-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
