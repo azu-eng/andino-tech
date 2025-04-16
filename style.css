@@ -1,6 +1,6 @@
 body {
   background-color: #f7f3ea;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #0a1f2c;
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: 120px;
   margin: 20px auto;
   display: block;
 }
@@ -20,17 +20,17 @@ header {
 }
 
 main {
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 footer {
   background-color: #0a1f2c;
   color: white;
-  padding: 10px;
+  padding: 15px;
 }
 
 /* WhatsApp Button */
@@ -38,11 +38,11 @@ footer {
   display: inline-block;
   background-color: #25d366;
   color: white;
-  padding: 12px 20px;
+  padding: 14px 24px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  margin: 20px auto;
+  margin: 30px auto;
   transition: background-color 0.3s;
 }
 
@@ -50,7 +50,7 @@ footer {
   background-color: #1ebd5a;
 }
 
-/* Responsive: se adapta a pantallas chicas */
+/* Responsive */
 @media (max-width: 600px) {
   h1 {
     font-size: 22px;
@@ -61,11 +61,189 @@ footer {
   }
 
   .logo {
-    width: 80px;
+    width: 90px;
   }
 
   .whatsapp-btn {
     font-size: 14px;
     padding: 10px 16px;
   }
+}
+
+#productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.producto {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  margin: 10px 0 5px;
+  color: #0a1f2c;
+}
+
+.producto p {
+  font-weight: bold;
+  color: #ff6f00;
+}
+.comprar-btn {
+  display: inline-block;
+  background-color: #ff6f00;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.comprar-btn:hover {
+  background-color: #e65c00;
+}
+#sobre-nosotros, #contacto {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+#sobre-nosotros p, #contacto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contacto-links {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-links li {
+  margin: 10px 0;
+}
+
+.contacto-links a {
+  color: #ff6f00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto-links a:hover {
+  text-decoration: underline;
+}
+.whatsapp-fijo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-fijo:hover {
+  background-color: #1ebd5a;
+}
+.galeria-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.producto {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  margin: 10px 0 5px;
+  color: #0a1f2c;
+}
+
+.producto p {
+  font-weight: bold;
+  color: #ff6f00;
+}
+
+.comprar-btn {
+  display: inline-block;
+  background-color: #ff6f00;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.comprar-btn:hover {
+  background-color: #e65c00;
+}
+.imagen-colores {
+  position: relative;
+}
+
+.opciones-color {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.color-btn:hover {
+  border: 2px solid #000;
+}
+
+.color-btn.negro {
+  background-color: black;
+}
+
+.color-btn.blanco {
+  background-color: white;
 }

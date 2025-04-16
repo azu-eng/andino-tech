@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andino Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  function cambiarImagen(btn, nuevaImagen) {
+    const contenedor = btn.closest(".imagen-colores");
+    const img = contenedor.querySelector(".imagen-activa");
+    img.src = nuevaImagen;
+  }
+</script>
 <body>
   <header>
     <img src="logo.jpg" alt="Logo Andino Tech" class="logo">
@@ -15,23 +24,53 @@
   <main>
     <section id="productos">
       <h2>Productos destacados</h2>
-      <ul>
-        <li>Parlante JBL Go 4</li>
-        <li>Auriculares JBL Tune</li>
-      </ul>
+      <div class="galeria-productos">
+
+        <div class="producto">
+          <img src="jbl-go-4.jpg" alt="Parlante JBL Go 4">
+          <h3>Parlante JBL Go 4</h3>
+          <p>$32.000</p>
+          <a href="https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20el%20Parlante%20JBL%20Go%204" target="_blank" class="comprar-btn">
+            Comprar ahora
+          </a>
+        </div>
+<div class="producto">
+  <div class="imagen-colores">
+    <img src="jbl-wave-negro.jpg" alt="Auriculares JBL Wave 200tws - Negro" class="imagen-activa">
+    <div class="opciones-color">
+      <button onclick="cambiarImagen(this, 'jbl-wave-negro.jpg')" class="color-btn negro"></button>
+      <button onclick="cambiarImagen(this, 'jbl-wave-blanco.jpg')" class="color-btn blanco"></button>
+    </div>
+  </div>
+  <h3>Auriculares JBL Wave 200tws</h3>
+  <p>$60.000</p>
+  <a href="https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws" target="_blank" class="comprar-btn">
+    Comprar ahora
+  </a>
+</div>
+      </div>
+    </section>
+
+    <section id="sobre-nosotros">
+      <h2>Sobre nosotros</h2>
+      <p>Somos Andino Tech, un emprendimiento mendocino apasionado por la tecnología. Ofrecemos productos originales de marcas como JBL, con atención personalizada y confianza.</p>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>Escribinos por WhatsApp para hacer tu pedido.</p>
+      <p>¿Tenés dudas o querés saber más? Escribinos por WhatsApp o seguinos en nuestras redes:</p>
+      <ul class="contacto-links">
+        <li><a href="https://wa.me/5492617704800" target="_blank">📱 WhatsApp</a></li>
+        <li><a href="https://instagram.com" target="_blank">📸 Instagram</a></li>
+        <li><a href="mailto:andinotech@email.com">✉️ Correo</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Andino Tech - Mendoza, Argentina</p>
   </footer>
-<a href="https://wa.me/5492617704800" target="_blank" class="whatsapp-btn">
-  📲 Escribinos por WhatsApp
-</a>
+
+  <a href="https://wa.me/5492617704800" class="whatsapp-fijo" target="_blank">🛋️</a>
 </body>
 </html>
