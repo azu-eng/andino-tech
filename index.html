@@ -6,48 +6,77 @@
   <title>Andino Tech</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<script>
-  function cambiarImagen(btn, nuevaImagen) {
-    const contenedor = btn.closest(".imagen-colores");
-    const img = contenedor.querySelector(".imagen-activa");
-    img.src = nuevaImagen;
-  }
-</script>
 <body>
-  <header>
-    <img src="logo.jpg" alt="Logo Andino Tech" class="logo">
-    <h1>Andino Tech</h1>
-    <p>Tecnología original al alcance de todos</p>
-  </header>
-
+  <header data-aos="fade-down" class="encabezado-principal">
+  <img src="logo.jpg" alt="Logo Andino Tech" class="logo-header">
+  <h1>Andino Tech</h1>
+  <hr class="decor-line">
+  <p>Tecnología original al alcance de todos</p>
+  <a href="#productos" class="btn-principal">Ver productos</a>
+</header>
   <main>
     <section id="productos">
       <h2>Productos destacados</h2>
+      <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="filtrarProductos()" class="input-buscador">
       <div class="galeria-productos">
 
-        <div class="producto">
+        <div class="producto" data-aos="fade-up">
           <img src="jbl-go-4.jpg" alt="Parlante JBL Go 4">
           <h3>Parlante JBL Go 4</h3>
-          <p>$32.000</p>
+          <p>$70.000</p>
+          <p class="detalle-producto">💬 Transferencia o pago al recibir</p>
+
           <a href="https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20el%20Parlante%20JBL%20Go%204" target="_blank" class="comprar-btn">
-            Comprar ahora
+            💬 Comprar por WhatsApp
           </a>
         </div>
-<div class="producto">
-  <div class="imagen-colores">
-    <img src="jbl-wave-negro.jpg" alt="Auriculares JBL Wave 200tws - Negro" class="imagen-activa">
-    <div class="opciones-color">
-      <button onclick="cambiarImagen(this, 'jbl-wave-negro.jpg')" class="color-btn negro"></button>
-      <button onclick="cambiarImagen(this, 'jbl-wave-blanco.jpg')" class="color-btn blanco"></button>
-    </div>
-  </div>
-  <h3>Auriculares JBL Wave 200tws</h3>
-  <p>$60.000</p>
-  <a href="https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws" target="_blank" class="comprar-btn">
-    Comprar ahora
-  </a>
-</div>
+
+        <div class="producto" data-aos="fade-up">
+          <div class="imagen-colores">
+            <img src="jbl-wave-negro.jpg" alt="Auriculares JBL Wave 200tws - Negro" class="imagen-activa">
+            <div class="opciones-color">
+              <button onclick="seleccionarColor('negro')" class="color-btn negro"></button>
+              <button onclick="seleccionarColor('blanco')" class="color-btn blanco"></button>
+            </div>
+          </div>
+
+          <h3>Auriculares JBL Wave 200tws</h3>
+          <p>$60.000</p>
+          <p class="detalle-producto">💬 Transferencia o pago al recibir</p>
+
+          <a id="btn-whatsapp" href="https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws%20-%20Negro" target="_blank" class="comprar-btn">
+            💬 Comprar por WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="confianza">
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="confianza-boxes">
+        <div class="confianza-item" data-aos="zoom-in">
+          <p>🚚</p>
+          <h4>Envíos rápidos</h4>
+          <p>Entregamos en todo Mendoza en 24 a 48 hs.</p>
+        </div>
+        <div class="confianza-item" data-aos="zoom-in">
+          <p>💳</p>
+          <h4>Pagá como quieras</h4>
+          <p>Aceptamos transferencias, pagos en efectivo y consultas por WhatsApp.</p>
+        </div>
+        <div class="confianza-item" data-aos="zoom-in">
+          <p>✅</p>
+          <h4>Garantía oficial</h4>
+          <p>Productos 100% originales con respaldo de marca.</p>
+        </div>
+        <div class="confianza-item" data-aos="zoom-in">
+          <p>🛠️</p>
+          <h4>Pedidos personalizados</h4>
+          <p>¿Buscás algo especial? Conseguimos productos a pedido según tu necesidad.</p>
+        </div>
       </div>
     </section>
 
@@ -72,5 +101,33 @@
   </footer>
 
   <a href="https://wa.me/5492617704800" class="whatsapp-fijo" target="_blank">🛋️</a>
+
+  <script>
+    function seleccionarColor(color) {
+      const img = document.querySelector('.imagen-activa');
+      const btnWA = document.getElementById('btn-whatsapp');
+
+      if (color === 'negro') {
+        img.src = 'jbl-wave-negro.jpg';
+        btnWA.href = 'https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws%20-%20Negro';
+      } else if (color === 'blanco') {
+        img.src = 'jbl-wave-blanco.jpg';
+        btnWA.href = 'https://wa.me/5492617704800?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws%20-%20Blanco';
+      }
+    }
+
+    function filtrarProductos() {
+      const input = document.getElementById("buscador").value.toLowerCase();
+      const productos = document.querySelectorAll(".producto");
+
+      productos.forEach(prod => {
+        const texto = prod.innerText.toLowerCase();
+        prod.style.display = texto.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>

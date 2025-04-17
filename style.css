@@ -22,6 +22,37 @@ header {
 main {
   padding: 30px 20px;
 }
+.imagen-colores {
+  position: relative;
+}
+
+.opciones-color {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.color-btn:hover {
+  border: 2px solid #000;
+}
+
+.color-btn.negro {
+  background-color: black;
+}
+
+.color-btn.blanco {
+  background-color: white;
+}
 
 section {
   margin-bottom: 40px;
@@ -246,4 +277,118 @@ footer {
 
 .color-btn.blanco {
   background-color: white;
+}
+#confianza {
+  background-color: #fff8f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.confianza-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.confianza-item {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+}
+
+.confianza-item p:first-child {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.confianza-item h4 {
+  margin: 10px 0 5px;
+  color: #ff6f00;
+}
+
+.confianza-item p {
+  font-size: 15px;
+  color: #333;
+}
+.stock {
+  font-size: 14px;
+  color: #0a1f2c;
+  margin: 5px 0;
+}
+
+.pagos {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.input-buscador {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.encabezado-principal {
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  position: relative;
+}
+
+.logo-header {
+  max-width: 100px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.encabezado-principal h1 {
+  font-size: 2.8rem;
+  margin: 0.2rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.encabezado-principal p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.decor-line {
+  width: 80px;
+  height: 4px;
+  background: #ff6600;
+  margin: 0.5rem auto 1rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn-principal {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-principal:hover {
+  background-color: #e05200;
+}
+.encabezado-principal {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  position: relative;
 }
