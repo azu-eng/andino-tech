@@ -8,48 +8,90 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
   <header data-aos="fade-down" class="encabezado-principal">
-  <img src="logo.jpg" alt="Logo Andino Tech" class="logo-header">
-  <h1>Andino Tech</h1>
-  <hr class="decor-line">
-  <p>Tecnología original al alcance de todos</p>
-  <a href="#productos" class="btn-principal">Ver productos</a>
-</header>
+    <img src="logo.jpg" alt="Logo Andino Tech" class="logo-header">
+    <h1>Andino Tech</h1>
+    <hr class="decor-line">
+    <p>Tecnología original al alcance de todos</p>
+    <a href="#productos" class="btn-principal">Ver productos</a>
+  </header>
+
   <main>
     <section id="productos">
       <h2>Productos destacados</h2>
       <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="filtrarProductos()" class="input-buscador">
       <div class="galeria-productos">
 
+        <!-- JBL GO 4 -->
         <div class="producto" data-aos="fade-up">
           <img src="jbl-go-4.jpg" alt="Parlante JBL Go 4">
           <h3>Parlante JBL Go 4</h3>
           <p>$70.000</p>
           <p class="detalle-producto">💬 Transferencia o efectivo.</p>
 
+          <button onclick="mostrarDescripcion(this)" class="ver-mas-btn">📄 Ver más</button>
+          <p class="descripcion-oculta" style="display: none;">
+            Parlante portátil compacto con sonido JBL Pro, batería de larga duración y resistencia al agua y polvo IP67. Ideal para llevar música a todos lados.
+          </p>
+
           <a href="https://wa.me/5492616307280?text=Hola,%20quiero%20comprar%20el%20Parlante%20JBL%20Go%204" target="_blank" class="comprar-btn">
             💬 Comprar por WhatsApp
           </a>
         </div>
 
+        <!-- Fire TV Stick -->
         <div class="producto" data-aos="fade-up">
-          <div class="imagen-colores">
-            <img src="jbl-wave-negro.jpg" alt="Auriculares JBL Wave 200tws - Negro" class="imagen-activa">
-            <div class="opciones-color">
-              <button onclick="seleccionarColor('negro')" class="color-btn negro"></button>
-              <button onclick="seleccionarColor('blanco')" class="color-btn blanco"></button>
-            </div>
-          </div>
+          <img src="fire-tv-stick.jpg" alt="Amazon Fire Tv Stick 3GB">
+          <h3>Amazon Fire Tv Stick 3GB</h3>
+          <p>$65.000</p>
+          <p class="detalle-producto">💬 Transferencia o efectivo.</p>
 
-          <h3>Auriculares JBL Wave 200tws</h3>
-          <p>$60.000</p>
-          <p class="detalle-producto">💬 Transferencia o efectivo</p>
+          <button onclick="mostrarDescripcion(this)" class="ver-mas-btn">📄 Ver más</button>
+          <p class="descripcion-oculta" style="display: none;">
+            Convertí tu televisor en un Smart TV con acceso a Netflix, YouTube, Disney+, Amazon Prime y mucho más. Fácil instalación y excelente rendimiento con 3GB de RAM.
+          </p>
 
-          <a id="btn-whatsapp" href="https://wa.me/5492616307280?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws%20-%20Negro" target="_blank" class="comprar-btn">
+          <a href="https://wa.me/5492616307280?text=Hola,%20quiero%20comprar%20el%20Amazon%20Fire%20Tv%20Stick%203GB" target="_blank" class="comprar-btn">
             💬 Comprar por WhatsApp
           </a>
         </div>
+        
+        <!-- Jbl Wabe Buds True -->
+        <div class="producto" data-aos="fade-up">
+          <img src="jbl-wabe-buds-true.jpg" alt="Jbl Wabe Buds True">
+          <h3>Jbl Wabe Buds True</h3>
+          <p>$65.000</p>
+          <p class="detalle-producto">💬 Transferencia o efectivo.</p>
+
+          <button onclick="mostrarDescripcion(this)" class="ver-mas-btn">📄 Ver más</button>
+          <p class="descripcion-oculta" style="display: none;">
+            Los JBL Wave Buds son auriculares in-ear inalámbricos diseñados para ofrecer una experiencia de audio cómoda y duradera. Equipados con drivers dinámicos de 8 mm, proporcionan un sonido JBL Deep Bass que resalta los bajos, ideal para quienes disfrutan de una música energética y envolvente .
+          </p>
+
+          <a href="https://wa.me/5492616307280?text=Hola,%20quiero%20comprar%20el%20Amazon%20Fire%20Tv%20Stick%203GB" target="_blank" class="comprar-btn">
+            💬 Comprar por WhatsApp
+          </a>
+        </div>
+
+         <!-- Samsung Fit 3-->
+        <div class="producto" data-aos="fade-up">
+          <img src="samsung-fit-3.jpg" alt="Samsung Fit 3">
+          <h3>Samsung Fit 3</h3>
+          <p>$70.000</p>
+          <p class="detalle-producto">💬 Transferencia o efectivo.</p>
+
+          <button onclick="mostrarDescripcion(this)" class="ver-mas-btn">📄 Ver más</button>
+          <p class="descripcion-oculta" style="display: none;">
+            Duración de carga de hasta 13 días. Se acomoda ligeramente en tu muñeca y registra más de 100 entrenamientos y actividades diarias, incluido el sueño. Te permite reproducir música, consultar llamadas y enviar mensajes directamente desde tu muñeca: mantenete empoderado, conectado y encaminado con Galaxy Fit3.
+            </p>
+
+          <a href="https://wa.me/5492616307280?text=Hola,%20quiero%20comprar%20el%20Amazon%20Fire%20Tv%20Stick%203GB" target="_blank" class="comprar-btn">
+            💬 Comprar por WhatsApp
+          </a>
+        </div>
+
 
       </div>
     </section>
@@ -91,7 +133,7 @@
       <ul class="contacto-links">
         <li><a href="https://wa.me/5492616307280" target="_blank">📱 WhatsApp</a></li>
         <li><a href="https://www.instagram.com/soyandinotech/" target="_blank">📸 Instagram</a></li>
-        <li><a href="andinotech385@gmail.com">✉️ Correo</a></li>
+        <li><a href="mailto:andinotech385@gmail.com">✉️ Correo</a></li>
       </ul>
     </section>
   </main>
@@ -103,17 +145,11 @@
   <a href="https://wa.me/5492617704800" class="whatsapp-fijo" target="_blank">🛋️</a>
 
   <script>
-    function seleccionarColor(color) {
-      const img = document.querySelector('.imagen-activa');
-      const btnWA = document.getElementById('btn-whatsapp');
-
-      if (color === 'negro') {
-        img.src = 'jbl-wave-negro.jpg';
-        btnWA.href = 'https://wa.me/5492616307280?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws%20-%20Negro';
-      } else if (color === 'blanco') {
-        img.src = 'jbl-wave-blanco.jpg';
-        btnWA.href = 'https://wa.me5492616307280/?text=Hola,%20quiero%20comprar%20los%20Auriculares%20JBL%20Wave%20200tws%20-%20Blanco';
-      }
+    function mostrarDescripcion(boton) {
+      const descripcion = boton.nextElementSibling;
+      const estaVisible = descripcion.style.display === "block";
+      descripcion.style.display = estaVisible ? "none" : "block";
+      boton.textContent = estaVisible ? "📄 Ver más" : "🔽 Ocultar";
     }
 
     function filtrarProductos() {
